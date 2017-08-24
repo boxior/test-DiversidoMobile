@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <title>test</title>
+    
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header class="topbar">
+          <ul class="topbar__nav nav">
+              <li class="nav__item"><a href="javascript:void(0);">Dashboard / </a></li>
+              <li class="nav__item"><a href="javascript:void(0);"> Home / </a></li>
+              <li class="nav__item"><a href="javascript:void(0);"> All Site View</a></li>
+          </ul>
+          <div class="topbar__period period">
+              <span class="period__header">Reporting Period</span>
+              <select class="period__select">
+                  <option class="period__item" value="30d" selected disabled>Last 30 Day’s </option>
+                  <option class="period__item" value="20d">Last 20 Day’s </option>
+                  <option class="period__item" value="10d">Last 10 Day’s </option>
+              </select>
+          </div>
+      </header>
+      <aside class="sidebar">
+          
+          <a href="javascript:void(0);" class="sidebar__logo">Company</a>
+          <div class="sidebar__user user">
+              <button type="button" class="user__photo"><img src="img/user.png" alt="user"></button>
+              <div class="user__about">
+                  <p class="user__name">user name</p>
+                  <p class="user__company">Company name</p>
+              </div>
+          </div>
+          <h2 class="sidebar__h2">General</h2>
+          <div class="sidebar__dashboard dashboard">
+              <button type="button" class="dashboard__header"><i class="fa fa-tachometer" aria-hidden="true"></i><p>Dashboard</p></button>
+              <ul class="dashboard__items">
+                  <li class="dashboard__item"><a href="javascript:void(0);">Dashboard 1</a></li>
+                  <li class="dashboard__item"><a href="javascript:void(0);">Dashboard 2</a></li>
+                  <li class="dashboard__item"><a href="javascript:void(0);">Dashboard 3</a></li>
+                  <li class="dashboard__item"><a href="javascript:void(0);">Comming Soon</a></li>
+              </ul>
+          </div>
+          <ul class="sidebar__links links">
+              <li class="links__item">
+                  <a href="javascript:void(0);"><i class="fa fa-desktop" aria-hidden="true"></i><span>Layouts</span></a>
+              <li class="links__item">
+                  <a href="javascript:void(0);"><i class="fa fa-folder-open-o" aria-hidden="true"></i><span>Pages</span></a>
+              </li>
+              <li class="links__item">
+                  <a href="javascript:void(0);"><i class="fa fa-commenting" aria-hidden="true"></i><span>Message</span><div>09</div></a>
+              </li>
+          </ul>
+      
+      </aside>
+      <section class="content">
+          <table  class="content__table table" cellspacing="0" cellpadding="0">
+              <caption class="table__caption">
+                  <div class="table__caption-left"> 
+                      <select class="table__select">
+                          <option value="rOrder">Recent order</option>
+                          <option value="rOrder1">Recent order1</option>
+                          <option value="rOrder2">Recent order2</option>
+                      </select>
+                  </div> 
+                  <div class="table__caption-right" > 
+                      <button type="button" class="table__refresh"><i class="fa fa-repeat"></i></button>
+                      <button type="button" class="table__sort"><i class="fa fa-chevron-down"></i></button>
+                      <button type="button" class="table__close"><i class="fa fa-times"></i></button>
+                  </div> 
+              </caption>  
+              <tr>
+                  <td style="width: 100%">
+                      <table class="table__in" cellspacing="0" cellpadding="0" style="width: 100%">
+                          <thead class="table__thead">
+                              <tr>
+                                  <th>Image</th>
+                                  <th>Product Name</th>
+                                  <th> Product Code</th>
+                                  <th>Status </th>
+                                  <th>Purchased On</th>
+                                  <th>Price</th>
+                                  <th>Quantity</th>
+                                  <th>Tracking No#</th>
+                              </tr>
+                          </thead>
+                          <tbody class="table__tbody">
+                              <tr>
+                                  <td><img src="img/medal.png" alt="medal"></td>
+                                  <td>Your Product Title Here</td>
+                                  <td>3BSD59</td>
+                                  <td><b>Paid</b></td>
+                                  <td>27 Sep 2015</td>
+                                  <td>$99.00</td>
+                                  <td>2</td>
+                                  <td>#BG6R9853LP</td>
+                              </tr>   
+                              <tr>
+                                  <td><img src="img/book.png" alt="book"></td>
+                                  <td>Your Product Title Here</td>
+                                  <td>3BH87G</td>
+                                  <td><b>Pending</b></td>
+                                  <td>08 Sep 2015</td>
+                                  <td>$99.00</td>
+                                  <td>2</td>
+                                  <td>#368QRM83B</td>
+                              </tr>  
+                          </tbody>
+                      </table>
+                  </td>
+              </tr>               
+          </table>
+      </section>
+      
+    </div>
+
+  <script src="libs/jquery/jquery-3.2.1.min.js"></script>
+  <script src="js/common.js"></script> 
+  
+  </body>
+</html>

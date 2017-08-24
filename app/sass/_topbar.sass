@@ -1,0 +1,68 @@
+.topbar 
+    position: fixed
+    z-index: 2
+    margin-left: 31.4rem
+    padding: 0 2rem 0 4rem
+    +flex(flex, row, space-between)
+    width: calc(100% - 31.4rem - 6rem)
+    max-width: calc(1052px - 6rem)
+    background-color: #4a868c 
+    height: 80px
+    pointer-events: none
+    +r(768)
+        margin-left: 0
+        margin-top: 80px
+        width: calc(100% - 4rem)
+        padding: 0 2rem
+    &:before
+        position: absolute
+        content: ''
+        display: block 
+        width: 38px
+        height: 38px
+        left: -19px
+        z-index: 999
+        border-radius: 50%
+        background: #46c1fa url('../img/menu-icon.svg') no-repeat center center
+        background-size: 23px auto
+        pointer-events: all
+        +r(768)
+            display: none
+    &:hover
+        &:before
+            cursor: pointer
+
+    .nav
+        padding: 0
+        pointer-events: all
+
+        &__item
+            display: inline-block 
+            a
+                font-size: 16px
+                +r(350)
+                    font-size: 14px
+
+            &:first-child
+                a
+                    font-family: "lato-bold-webfont"
+
+    .period 
+        +flex
+        pointer-events: all
+
+        &__header
+            +font(16px)
+            margin-right: 2rem
+            +r(350)
+                font-size: 14px
+
+        &__select
+            +font(14px)
+            color: #000000
+            padding: 0.9rem 2.7rem 0.9rem 2.7rem
+            border-radius: .3rem
+            appearance: none
+
+        &__item
+           
