@@ -45,12 +45,13 @@ $(function(){
                 
                 $('[data-th = ""]').each(function(){
                     tdArr.push($(this));
+                    $(this).css({'font-family': "lato-bold-webfont", 'text-transform': 'uppercase', 
+                                    'font-size': '12px'});
                     $(this).parent().css({'display':'flex', 'justify-content':'space-between',
                                             'align-items': 'center','border-bottom': '1px solid #e8e8e8'});
                 });
 
                 var count = tdArr.length / thArr.length;
-
                 for(var c = 1; c < count + 1; c++) {
                     thArr.forEach(function(el, i){
                     thArrAll.push(el);
@@ -166,7 +167,6 @@ $(function(){
 
         mobileLogo();
         mobileTable();
-        dashHeaderCut();
 
         if (window.matchMedia("(min-width: 769px)").matches) {
             $('.content').css('padding-top', 'calc(80px + 2.3rem)');
@@ -215,29 +215,30 @@ $(function(){
         }        
     });  
     
-    // Dashboard Header Cutting
-    function dashHeaderCut(){
-        var dashStart = $('.dashboard__header span').text();
-        var dashNew;
-        if (window.matchMedia("(max-width: 900px)").matches) {
-            if(dashStart.length > dashMainLength + 2) {
-                dashNew = dashStart.slice(0, dashMainLength - 1);
-                dashNew += '...';
-            }
-        }
-        $('.dashboard__header span').text(dashNew);
-    }
-
     //Select Dashboard
-    var dashMainLength = $('.dashboard__header span').text().length;
     $('.dashboard__item').on('click' ,function(){
-        
+        tD = 0;
         $(this).parent().fadeOut(0);
         $('.dashboard__header span').text($(this).text());
 
-        dashHeaderCut();
+        if(window.matchMedia("(max-width: 768px)").matches) {
+            $('.content').animate({'padding-top':'160px'});
+            $('.topbar').toggle();
+        }
     });
 
+    //Hover Dashboard Header
+    $('.dashboard__header').hover(function(){
+        $(this).css('color', '#46c1fa');
+        if(window.matchMedia("(min-width: 769px)").matches) {
+            $(this).css({'background-image': 'url("img/angle-arrow-down-hov.svg")'});
+        }
+        }, function(){
+        $(this).css('color', '#ffffff');
+        if(window.matchMedia("(min-width: 769px)").matches) {
+            $(this).css({'background-image': 'url("img/angle-arrow-down.svg")'});
+        }
+    });
 });
 
 

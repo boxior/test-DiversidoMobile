@@ -6,7 +6,7 @@
     max-width: 1052px
     margin-left: 31.4rem
     padding: calc(80px + 2.3rem) 2.7rem 0 2.7rem
-    +r(768)
+    +r(768) //mixin @media max-width
         width: 100%
         padding: 160px 2rem 2rem 2rem
         margin: 0 auto
@@ -25,7 +25,7 @@
             height: 53px           
 
             .select-styled, .select-options
-                +font(12.83px, 28.5px, bold, uppercase, "lato-bold-webfont") 
+                +font(12.83px, 28.5px, bold, uppercase, "lato-bold-webfont")  //mixin font
                 text-transform: uppercase
                 padding-left: 2.2rem
                 color: #777777
@@ -66,13 +66,23 @@
                 text-align: right
                 padding-right: 2.2rem 
                 width: calc(100% - 68% - 0.3em)
+                +r(768)
+                    text-align: center
 
                 button 
                     margin-left: 2rem
+                    +r(768)
+                        &:first-child
+                            float: left
+
+                        &:last-child
+                            float: right
 
                     .fa 
                         font-size: 16px
-                        color: #777777
+                        color: #777777 
+                        +r(768)
+                            font-size: 20px
 
         &__thead 
 

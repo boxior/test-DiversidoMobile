@@ -3,12 +3,12 @@
     z-index: 2
     margin-left: 31.4rem
     padding: 0 2rem 0 4rem
-    +flex(flex, row, space-between)
+    +flex(flex, row, space-between) //mixin flex
     width: calc(100% - 31.4rem - 6rem)
     max-width: calc(1052px - 6rem)
     background-color: #4a868c 
     height: 80px
-    +r(768)
+    +r(768) //mixin @media max-width
         margin-left: 0
         margin-top: 80px
         width: calc(100% - 4rem)
@@ -48,13 +48,13 @@
         +flex
 
         &__header
-            +font(16px)
+            +font(16px) //mixin font
             margin-right: 2rem
             +r(350)
                 font-size: 14px
 
         &__select
-            +font(14px)
+            +font(14px) 
             color: #000000
             padding: 0.9rem 2.7rem 0.9rem 2.7rem
             border-radius: .3rem
