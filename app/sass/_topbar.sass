@@ -8,13 +8,12 @@
     max-width: calc(1052px - 6rem)
     background-color: #4a868c 
     height: 80px
-    pointer-events: none
     +r(768)
         margin-left: 0
         margin-top: 80px
         width: calc(100% - 4rem)
         padding: 0 2rem
-    &:before
+    &__icon
         position: absolute
         content: ''
         display: block 
@@ -25,7 +24,6 @@
         border-radius: 50%
         background: #46c1fa url('../img/menu-icon.svg') no-repeat center center
         background-size: 23px auto
-        pointer-events: all
         +r(768)
             display: none
     &:hover
@@ -34,7 +32,6 @@
 
     .nav
         padding: 0
-        pointer-events: all
 
         &__item
             display: inline-block 
@@ -49,7 +46,6 @@
 
     .period 
         +flex
-        pointer-events: all
 
         &__header
             +font(16px)

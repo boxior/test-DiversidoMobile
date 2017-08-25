@@ -62,7 +62,6 @@ gulp.task('js', ['common-js'], function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-
 gulp.task('browser-sync', function() {
   browserSync({
     server: {
