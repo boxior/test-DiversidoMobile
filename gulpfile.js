@@ -90,10 +90,11 @@ gulp.task('img', function() {
   .pipe(gulp.dest('docs/img'));
 });
 
-gulp.task('watch', ['html', 'sass', 'js', 'browser-sync'], function() {
+gulp.task('watch', ['html', 'sass', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch('app/templates/**/*.html', ['html']);
-	// gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
+  // gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
+  gulp.watch(['libs/**/*.js', 'app/js/common.js'], browserSync.reload);
 	gulp.watch('app/*.html', browserSync.reload);
 });
 

@@ -22,7 +22,7 @@
 
     <div class="wrapper">
       <header class="topbar">
-          <button type="button" class="topbar__icon"></button>
+          <button type="button" class="topbar__icon hvr-ripple-out "></button>
           <ul class="topbar__nav nav">
               <li class="nav__item"><a href="javascript:void(0);">Dashboard / </a></li>
               <li class="nav__item"><a href="javascript:void(0);"> Home / </a></li>
@@ -70,7 +70,7 @@
       
       </aside>
       <section class="content">
-          <table  class="content__table table" cellspacing="0">
+            <table style="display: none" class="content__item table" cellspacing="0"> 
               <caption class="table__caption">
                   <div class="table__caption-left"> 
                       <select class="table__select">
@@ -125,7 +125,9 @@
                       </table>
                   </td>
               </tr>               
-          </table>
+           </table>  
+           <h2 class="content__item home" style="display: none">Heare is Home page</h2> 
+           <div class="content__item all-site" style="display: none"><p>Heare is All Site View</p></div> 
       </section>
       
     </div>

@@ -1,3 +1,5 @@
+//Style for Custom Select-tag is situated in sass/base/_selectCustom.sass
+
 .topbar 
     position: fixed
     z-index: 2
@@ -26,23 +28,28 @@
         background-size: 23px auto
         +r(768)
             display: none
-    &:hover
-        &:before
-            cursor: pointer
-
+            
     .nav
         padding: 0
+        margin-right: 3rem
+
+        &__focused
+            font-family: "lato-bold-webfont"
 
         &__item
             display: inline-block 
             a
                 font-size: 16px
+
+                &:hover
+                    border-bottom: 2px solid #ffffff 
+
                 +r(350)
                     font-size: 14px
 
-            &:first-child
-                a
-                    font-family: "lato-bold-webfont"
+            // &:first-child
+            //     a
+            //         font-family: "lato-bold-webfont"
 
     .period 
         +flex
@@ -61,4 +68,3 @@
             appearance: none
 
         &__item
-           

@@ -11,16 +11,18 @@
         padding: 160px 2rem 2rem 2rem
         margin: 0 auto
 
-    .table
+    &__item
         width: 100%
         color: #777777
         text-align: center
         border: 1px solid #e8e8e8 
 
+    .table
+    
         * 
             box-sizing: border-box
 
-        //Custom Select *start
+        //Custom Select-tag *start
         .select
             height: 53px           
 
@@ -46,7 +48,7 @@
 
         &__caption 
             text-align: left
-            border: 1px solid #e8e8e8 
+            border: 1px solid #e8e8e8  
             border-bottom: 0
             height: 53px
             color: #777777
@@ -119,6 +121,8 @@
                     &:first-child 
                         text-align: left
                         padding: 1.5rem 0
+                        +r(950)
+                            padding: 0
 
                     &:last-child 
                         text-align: right
@@ -135,3 +139,12 @@
         &__in 
             padding: 0.5rem 2.2rem 1.5rem 2.2rem
   
+    .home
+        +font(50px)
+        color: #777777 
+        text-align: center
+
+    .all-site
+        +font(50px)
+        color: #525252 
+        text-align: center
