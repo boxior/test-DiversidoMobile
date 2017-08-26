@@ -28,7 +28,7 @@ $(function(){
     }
 
     //Logo, works first
-    function mobileLogo(){
+    function mobileLogo() {
         //cl%2 Click even
         if($(window).width() <= 1150 || cl%2 ) {
             var logo = $('.sidebar__logo').text().slice(0, 1);
@@ -39,7 +39,7 @@ $(function(){
     }
     
     //Custom Table
-    function mobileTable(){
+    function mobileTable() {
 
         if(window.matchMedia("(max-width: 950px)").matches) {
 
@@ -96,7 +96,7 @@ $(function(){
     }
 
     //Sidebar Start Position
-    function sidebarStartPosAnim(){
+    function sidebarStartPosAnim() {
         $('.sidebar').animate({'width': '31.4rem'}).removeAttr('data-toggle','');
         $('.topbar').animate({'margin-left': '31.4rem'})
                     .css({'width':'calc(100% - 31.4rem - 6rem)', 'max-width': 'calc(1052px - 6rem)'});
@@ -107,7 +107,7 @@ $(function(){
                                     'text-align': 'left', 'padding': '2rem 4.5rem 2rem 2.2rem'});
     }
 
-    function sidebarStartPosFade(){
+    function sidebarStartPosFade() {
         $('.user__about').show();
         $('.sidebar__h2').show();
         $('.dashboard__header span').show();
@@ -115,7 +115,7 @@ $(function(){
     }
 
     //Sidebar Second Position
-    function sidebarSecondPos(){
+    function sidebarSecondPos() {
         $('.user__about').hide();
         $('.sidebar__h2').hide();
         $('.dashboard__header span').hide();
@@ -132,7 +132,7 @@ $(function(){
     }
 
     //Custom Select
-    $('select').each(function(){
+    $('select').each(function() {
         var $this = $(this), numberOfOptions = $(this).children('option').length;
     
         $this.addClass('select-hidden'); 
@@ -178,7 +178,7 @@ $(function(){
     });
 
     //Hover Sidebar
-    $('.sidebar').hover(function(){
+    $('.sidebar').hover(function() {
         cl = 0;
         mobileLogo();
 
@@ -212,7 +212,7 @@ $(function(){
 
     //Toggle icon
     var cl = 0; //Click Counter
-    $('.topbar__icon').on('click', function(){
+    $('.topbar__icon').on('click', function() {
         cl++;
         mobileLogo();
 
@@ -227,7 +227,7 @@ $(function(){
 
     //Toggle Dashboard
     var tD = 0;
-    $('.dashboard__header').on('click' ,function(){
+    $('.dashboard__header').on('click' ,function() {
         $(this).next().toggle();
         if (window.matchMedia("(max-width: 768px)").matches) {
             $('.topbar').toggle();
@@ -242,7 +242,7 @@ $(function(){
     });  
     
     //Select Dashboard
-    $('.dashboard__item').on('click' ,function(){
+    $('.dashboard__item').on('click' ,function() {
         tD = 0;
         $(this).parent().hide();
         $('.dashboard__header span').text($(this).text());
@@ -254,7 +254,7 @@ $(function(){
     });
 
     //Hover Dashboard Header
-    $('.dashboard__header').hover(function(){
+    $('.dashboard__header').hover(function() {
         $(this).css('color', '#46c1fa');
         if(window.matchMedia("(min-width: 769px)").matches) {
             $(this).css({'background-image': 'url("img/angle-arrow-down-hov.svg")'});

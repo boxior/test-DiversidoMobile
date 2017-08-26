@@ -3251,6 +3251,12 @@ img {
               font-size: 20px; }
   /**/ }
 
+@media only screen and (max-width: 545px) {
+        .topbar .nav__item {
+          margin-bottom: 2rem; }
+        .topbar .nav__item:last-child {
+          margin-bottom: 0; } }
+
 @media only screen and (max-width: 350px) {
           .topbar .nav__item a {
             font-size: 14px; }
