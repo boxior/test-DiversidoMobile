@@ -18,6 +18,7 @@
         border: 1px solid #e8e8e8 
 
     .table
+        border-spacing: 0
     
         * 
             box-sizing: border-box
@@ -93,9 +94,8 @@
                     +font(12px, 48px, normal, uppercase, "lato-bold-webfont")
                     letter-spacing: 1px
                     padding: 0
-                    border-spacing: 0
                     color: #949393
-                    border-bottom: 1px solid #e8e8e8 
+                    border-bottom: 1px solid #e8e8e8  
                     +r(1100)
                         line-height: 24px
                         padding: 0 1rem
@@ -118,6 +118,8 @@
                 width: inherit
 
                 td 
+                    padding: 0
+
                     &:first-child 
                         text-align: left
                         padding: 1.5rem 0
@@ -137,6 +139,8 @@
                             font-family: 'lato-regular-webfont'
 
         &__in 
+            width: 100%
+            border-spacing: 0
             padding: 0.5rem 2.2rem 1.5rem 2.2rem
   
     .home

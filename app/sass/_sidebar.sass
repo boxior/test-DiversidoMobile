@@ -65,6 +65,10 @@
         +r(768)
             height: 100%
             background-color: inherit
+        
+        .after-hide
+            &:after
+                display: none
 
         &__header 
             position: relative
@@ -75,8 +79,10 @@
             color: $color-white
             border-left: 8px solid #46c1fa
             padding: 2rem 4.5rem 2rem 2.2rem
-            background: url('../img/angle-arrow-down.svg') no-repeat calc(100% - 4.5rem) 50%
-            background-size: 14px
+
+            &:hover
+                color: #46c1fa
+
             +r(950)
                 background-position-x: calc(100% - 2rem)
             +r(768)
@@ -106,6 +112,15 @@
             .fa-tachometer
                 font-size: 34px
                 vertical-align: super
+            
+            &:after
+                content: "\f107"
+                font-family: 'fontawesome-webfont'
+                font-size: 14px
+                position: absolute
+                @extend %vam
+                +r(768)
+                    display: none
         
         &__items
             display: none
